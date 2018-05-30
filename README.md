@@ -1,1 +1,0 @@
-# MACARON-GenMed-LabEx
