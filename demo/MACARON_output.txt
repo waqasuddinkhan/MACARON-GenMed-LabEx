@@ -1,0 +1,5 @@
+CHROM	POS	ID	REF	ALT	Gene_Name	QUAL	sample01.GT	sample02.GT	sample03.GT	sample01.GT	sample02.GT	sample03.GT	Protein_coding_EFF	AA-Change	Ref-codon	Alt-codon	Altcodon_merge-2VAR	AA-change-2VAR	Altcodon_merge-3VAR	AA-change-3VAR
+chr22	21349676	rs412470	T	A	LZTR1	423.0	T/T	T/A	T/T	0/0	0/1	0/0	MISSENSE	S92T	Tct	Act	ATt	I	.	.
+chr22	21349677	rs376419	C	T	LZTR1	423.0	C/C	C/T	C/C	0/0	0/1	0/0	MISSENSE	S92F	tCt	tTt	.	I	.	.
+chr22	23247169	rs527511481	T	G	IGLJ3	719.0	T/T	T/G	T/T	0/0	0/1	0/0	MISSENSE	W39G	Tgg	Ggg	GTg	V	.	.
+chr22	23247170	rs540954398	G	T	IGLJ3	716.0	G/G	G/T	G/G	0/0	0/1	0/0	MISSENSE	W39L	tGg	tTg	.	V	.	.
