@@ -11,7 +11,7 @@ MACARON User Guide
     * [Runtime Pre-requisite](#runtime-pre-requisite)
     * [Software Dependencies](#software-dependencies)
     * [Downloading the Source Code](#downloading-the-source-code)
-    * [Contents of the Folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
+    * [Contents of the Folder MACARON_GenMed](#contents-of-the-folder-macaron_genmed)
 * [Running the MACARON](#running-the-macaron)
     * [Input Requirements](#input-requirements)
     * [demo Folder](#demo-folder)
