@@ -9,7 +9,7 @@ MACARON User Guide
 * [Installation](#installation)
     * [Operating System Guidelines](#operating-system-guidelines)
     * [Runtime Pre-requisite](#runtime-pre-requisite)
-    * [Software Dependencies](#software)
+    * [Software Dependencies](#software-dependencies)
     * [Downloading the Source Code](#downloading-the-source-code)
     * [Contents of the Folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
 * [Running the MACARON](#running-the-macaron)
