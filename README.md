@@ -16,7 +16,7 @@ MACARON User Guide
     * [Input Requirements](#input-requirements)
     * [Default Options](#default-options)
     * [demo Folder](#demo-folder)
-    * [Additional Options](#additional-options)
+    * [Advanced Options](#additional-options)
     
 
 * [Known Limitations](#known-limitations)
@@ -103,7 +103,7 @@ For a full list of MACARON executable options, run:
 
       python MACARON -h
 
-By default, MACARON depends on the `GLOBAL VARIABLES` set in the script befroe run:
+By default, MACARON depends on the `GLOBAL VARIABLES` set in the script before run:
 
       ## GLOBAL VARIABLES (IMPORTANT: You can set the default values here)
       GATK="/home/wuk/software/GenomeAnalysisTK.jar"
@@ -143,12 +143,12 @@ To help verify a successful installation, MACARON includes a small demo data set
 
 MACARON_output.txt is the default output file name of MACARON. User can change it with `-o` option.
 
-      python ../MACARON -i variants_of_interest.vcf -o 
+      python ../MACARON -i variants_of_interest.vcf -o variants_of_interest.txt
 
-```bash
-python MACARON -i variants_of_interest.vcf -o MACARON_output.txt
-```
-### Additional Options
+### Advanced Options
+
+
+
 
 -f has three options:
 
