@@ -15,7 +15,7 @@ MACARON User Guide
     * [demo Folder](#demo-folder)
 * [Running the MACARON](#running-the-macaron)
     * [Input Requirements](#input-requirements)
-    * [Additional Opions](#additional-options)
+    * [Additional Options](#additional-options)
 * [Known Limitations](#known-limitations)
 
 [//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
@@ -105,7 +105,7 @@ Before running MACARON, check these __input technical notes__ as the following l
 
 - Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below),
 
-- Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets.
+- Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets,
 
 - Versions of input VCF file, Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
 
@@ -115,7 +115,7 @@ Output file name prefix: MACARON uses input VCF file name as prefix by default. 
 python MACARON -i variants_of_interest.vcf -o MACARON_output.txt`
 ```
 
-### ADDITIONAL OPTIONS
+### Additional Options
 
 -f has three options:
 
