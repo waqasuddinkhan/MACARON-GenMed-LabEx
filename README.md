@@ -50,6 +50,14 @@ __2.__ __SnpEff__ (tested with __v4.3__ (build 2017-05-05 18:41). However, MACAR
 
 __3.__ __SAMTools__ (tested with version __0.1.19__), however any version can be used.
 
+### Build Procedure
+
+MACARON source code can be downloaded from http://www.genmed.fr/images/publications/data/MACARON_GenMed.zip
+
+After acquiring a release distribution of the source code, the build procedure is to unpack the zip file:
+
+ * unzip MACARON_GenMed_local
+
 ## Contents of the folder MACARON_GenMed
 
 * *MACARON_v0.3.py*  –  The MACARON python code
