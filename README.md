@@ -30,7 +30,7 @@ The information below includes how to install and run MACARON to filter a list o
 
 MACARON is know to run and build on LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version.
 
-### Runtime Prequisites
+### Runtime Pre-quisites
 
 __1.__ MACARON is executable in __PYTHON v2.7 or later__. If the user has multiple PYTHON versions, please make sure that your running environment is set to the required version of PYTHON.
 
