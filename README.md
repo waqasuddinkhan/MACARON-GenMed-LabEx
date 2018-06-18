@@ -15,15 +15,6 @@ MACARON User Guide
 
 [//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
 
-*CONTACT: david-alexandre.tregouet@inserm.fr*
-
-*VERSION: 0.3*
-*VERSION DATE: 11th April, 2018*
-
-If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext), please cite:
-
-*Khan W. et al. MACARON: a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data, Bioinformatics 2018*
-
 # Introduction
 
 ### MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
@@ -157,3 +148,12 @@ This will generate an output text file (`MACARON_validate.txt`) allowing the use
 * Cingolani, P., et al. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly, 6, 80-92.
 * McLaren, W., et al. (2010) Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor, Bioinformatics, 26, 2069-2070.
 * Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data, Nucleic Acids Res, 38, e164.
+
+*CONTACT: david-alexandre.tregouet@inserm.fr*
+
+*VERSION: 0.3*
+*VERSION DATE: 11th April, 2018*
+
+If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext), please cite:
+
+*Khan W. et al. MACARON: a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data, Bioinformatics 2018*
