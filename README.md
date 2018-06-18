@@ -105,12 +105,28 @@ For a full list of MACARON executable options, run:
 
 By default, MACARON depends on the `GLOBAL VARIABLES` set in the script befroe run:
 
-`## GLOBAL VARIABLES (IMPORTANT: You can set the default values here)
-GATK="/home/wuk/software/GenomeAnalysisTK.jar"
-#GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
-HG_REF="/home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta"
-SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
-SNPEFF_HG="GRCh37.75" ## SnpEff genome version`
+      ## GLOBAL VARIABLES (IMPORTANT: You can set the default values here)
+      GATK="/home/wuk/software/GenomeAnalysisTK.jar"
+      #GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
+      HG_REF="/home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta"
+      SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
+      SNPEFF_HG="GRCh37.75" ## SnpEff genome version
+
+To run MACARON with __GATK <4.0__, simply type:
+
+      python MACARON -i test_input.vcf
+
+If running with __GATK >= 4.0__, make following changes:
+
+      #GATK="/home/wuk/software/GenomeAnalysisTK.jar"
+      GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
+      HG_REF="/home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta"
+      SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
+      SNPEFF_HG="GRCh37.75" ## SnpEff genome version
+
+and run with:
+
+      python MACARON -i test_input.vcf --gatk4
 
 ### demo Folder
 
@@ -121,16 +137,13 @@ To help verify a successful installation, MACARON includes a small demo data set
 * *sub1.chr22_21349676-21349677.sample02.bam*  –  a subset of BAM file used as input for MACARON_validate.sh
 * *MACARON_validate.txt*  –  The output file with read count information of concerned pcSNV in sample02 (in this case).
 
-```bash
-cd
-```
-to demo folder
+`cd` to demo folder and run:
 
-python MACARON -i variants_of_interest.vcf
+      python ../MACARON -i variants_of_interest.vcf
 
-See * [below] for detailed information.
+MACARON_output.txt is the default output file name of MACARON. User can change it with `-o` option.
 
-Output file name prefix: MACARON uses input VCF file name as prefix by default. User can change it with `-o` option.
+      python ../MACARON -i variants_of_interest.vcf -o 
 
 ```bash
 python MACARON -i variants_of_interest.vcf -o MACARON_output.txt
