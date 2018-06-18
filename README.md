@@ -9,6 +9,7 @@ MACARON User Guide
 * [Installation](#installation)
     * [Runtime prerequisites](#runtime-prerequisites)
     * [Operating System Guidelines](#operating-system-guidelines)
+    * [Build Procedure](#build-procedure)
 
 * [Method Overview](#method-overview)
 * [Capabilities](#capabilities)
@@ -27,7 +28,12 @@ The information below includes how to install and run MACARON to filter a list o
 
 ### Runtime Prequisites
 
-MACARON is executable in PYTHON and tested with 2.7.X or later.
+1. MACARON is executable in __PYTHON v2.7 or later__. If the user has multiple PYTHON, please make sure that your running environment is set to the required version of PYTHON.
+
+2. Check your __JAVA__ version as MACARON is tested with: java -version
+    openjdk version __"1.8.0_151"__
+    OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12)
+    OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 
 ### Operating System Guidelines
 
@@ -43,16 +49,8 @@ MACARON is know to run and build on LINUX UBUNTU 16.04 LTS. However, MACARON can
 * *MACARON_validate.txt*  –  The output file with read count information of concerned pcSNV in sample02 (in this case).
 
 
-## REQUIREMENTS
+Before running MACARON, please make sure that following software are properly installed:
 
-MACARON is executable in PYTHON and tested with 2.7.X,  Before running MACARON, please make sure that following software are properly installed:
-
-1. __PYTHON v2.7 or later__ (tested with PYTHON v2.7.12). Please make sure that your running environment is set to the required version of PYTHON.
-
-2. Check your __JAVA__ version as MACARON is tested with: java -version
-    openjdk version __"1.8.0_151"__
-    OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12)
-    OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 
 3. __Genome-Analysis Toolkit__ (tested with __version 3.7-0-gcfedb67__; https://software.broadinstitute.org/gatk/download/). However, MACARON compatible with GATK≥4.0 is also available.
 
