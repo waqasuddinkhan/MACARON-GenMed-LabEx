@@ -21,6 +21,7 @@ If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abs
 
 *Khan W. et al. MACARON: a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data, Bioinformatics 2018*
 
+## Introduction
 
 # MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
 
