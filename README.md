@@ -10,6 +10,8 @@ MACARON User Guide
 * [Method Overview](#method-overview)
 * [Capabilities](#capabilities)
 
+[//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
+
 *CONTACT: david-alexandre.tregouet@inserm.fr*
 
 *VERSION: 0.3*
