@@ -14,7 +14,8 @@ MACARON User Guide
 * [Contents of the Folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
     * [demo Folder](#demo-folder)
 * [Running the MACARON](#running-the-macaron)
-   * [Input Requirements](#input-requirements)
+    * [Input Requirements](#input-requirements)
+    * [Additional Opions](#additional-options)
 * [Known Limitations](#known-limitations)
 
 [//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
@@ -90,7 +91,7 @@ The demo can be run as follows:
 
 python MACARON -i variants_of_interest.vcf -o MACARON_output.txt
 
-See [Running the MACARON] for detailed information.
+See * [below] for detailed information.
 
 # Running the MACARON
 
@@ -98,11 +99,11 @@ See [Running the MACARON] for detailed information.
 
 Before running MACARON, check these __input technical notes__ as the following limitations exist for either the input VCF file, or the required software dependencines:
 
-- Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file,
+- Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file, or vice versa,
 
-- Sequence dictionaries of input VCF file and Human Reference Genome file should be the same.
+- Sequence dictionaries of input VCF file and Human Reference Genome file should be the same,
 
-- Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below).
+- Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below),
 
 - Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets.
 
@@ -111,10 +112,10 @@ Before running MACARON, check these __input technical notes__ as the following l
 Output file name prefix: MACARON uses input VCF file name as prefix by default. User can change it with `-o` option.
 
 ```bash
-python MACARON_v0.3.py -i input_test.vcf -o MACARON_output.txt -d full_path_of_input_VCFfile_directory -f INFO_FILED_HEADER`
+python MACARON -i variants_of_interest.vcf -o MACARON_output.txt`
 ```
 
-## ADDITIONAL OPTIONS:
+### ADDITIONAL OPTIONS
 
 -f has three options:
 
