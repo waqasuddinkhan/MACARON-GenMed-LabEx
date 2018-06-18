@@ -11,6 +11,7 @@ MACARON User Guide
     * [Runtime prerequisites](#runtime-prerequisites)
     * [Software Dependencies](#software)
     * [Build Procedure](#build-procedure)
+* [Contents of the folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
 
 * [Method Overview](#method-overview)
 * [Capabilities](#capabilities)
@@ -52,13 +53,17 @@ __3.__ __SAMTools__ (tested with version __0.1.19__), however any version can be
 
 ### Build Procedure
 
-MACARON source code can be downloaded from http://www.genmed.fr/images/publications/data/MACARON_GenMed.zip
+The most prefered way to use the latest version of MACARON is:
+
+      git clone https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx.git
+
+MACARON source code can also be downloaded from http://www.genmed.fr/images/publications/data/MACARON_GenMed.zip
 
 After acquiring a release distribution of the source code, the build procedure is to unpack the zip file:
 
- * unzip MACARON_GenMed_local
+      unzip MACARON_GenMed.zip
 
-## Contents of the folder MACARON_GenMed
+### Contents of the folder MACARON_GenMed
 
 * *MACARON_v0.3.py*  –  The MACARON python code
 * *MACARON_validate.sh*  –  a BASH-shell script to validate multi-SNVs located on the same read that affect the same genetic codon
