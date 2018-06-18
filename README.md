@@ -8,13 +8,13 @@ MACARON User Guide
 * [Introduction](#introduction)
 * [Installation](#installation)
     * [Operating System Guidelines](#operating-system-guidelines)
-    * [Runtime Pre-requisites](#runtime-pre-requisites)
+    * [Runtime Pre-requisite](#runtime-pre-requisite)
     * [Software Dependencies](#software)
     * [Downloading the Source Code](#downloading-the-source-code)
 * [Contents of the folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
-
-* [Method Overview](#method-overview)
-* [Capabilities](#capabilities)
+* [Running the MACARON](#running-the-macaron)
+   * [Input Requirements](#input-requirements)
+* [Known Limitations](#known-limitations)
 
 [//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
 
@@ -30,7 +30,7 @@ The information below includes how to install and run MACARON to filter a list o
 
 MACARON is know to run on LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version.
 
-### Runtime Pre-quisites
+### Runtime Pre-requisite
 
 __1.__ MACARON is executable in __PYTHON v2.7 or later__. If the user has multiple PYTHON versions, please make sure that your running environment is set to the required version of PYTHON.
 
@@ -89,42 +89,23 @@ The demo can be run as follows:
 
 python MACARON -i variants_of_interest.vcf -o MACARON_output.txt
 
-See [the demo README](../../src/demo/README.md) for additional information
-on the test script and data.???
+See [Running the MACARON] for detailed information.
 
+# Running the MACARON
 
+### Input Requirements
 
+Before running MACARON, check these __input technical notes__ as the following limitations exist for either the input VCF file, or the required software dependencines:
 
-
-
-
-
-Additional files that will be needed are:
-
-A Note on TECHNICAL ISSUES:
-
-- Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file, or vice versa.
+- Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file,
 
 - Sequence dictionaries of input VCF file and Human Reference Genome file should be the same.
 
 - Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below).
 
-- Same Human Reference Genome file should be used for MACARON which is practiced earlier to call variant sets.
+- Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets.
 
-- Version of both Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
-
-## RUNNING THE PIPELINE
-
-Before running MACARON, please add full paths of GATK and SnpEff to MACARON algorithm, e.g.,
-
-```bash
-USAGE INSTRUCTIONS:￫￫	Full path to the software directories should be set before compiling.
-"""
-GATK="/full_path_to/GenomeAnalysisTK.jar"
-HG_REF="/full_path_to/Human_Reference_Genome.fasta"
-SNPEFF="/full_path_to/snpEff.jar"
-SNPEFF_HG="GRChXX.XX"
-```
+- Versions of input VCF file, Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
 
 Output file name prefix: MACARON uses input VCF file name as prefix by default. User can change it with `-o` option.
 
@@ -173,6 +154,14 @@ Once subset BAM files are generated, run MACARON_validate.sh.
 example: `MACARON_validate.sh sub1.chr22_21349676-21349677.sample02.bam`
 
 This will generate an output text file (`MACARON_validate.txt`) allowing the user for further analysis.
+
+Additional files that will be needed are:
+
+A Note on TECHNICAL ISSUES:
+
+
+
+
 
 
 ## REFERENCES
