@@ -1,3 +1,15 @@
+MACARON User Guide
+================
+
+## Table of Contents
+
+[//]: # (BEGIN automated TOC section, any edits will be overwritten on next source refresh)
+
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Method Overview](#method-overview)
+* [Capabilities](#capabilities)
+
 *CONTACT: david-alexandre.tregouet@inserm.fr*
 
 *VERSION: 0.3*
