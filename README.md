@@ -20,8 +20,6 @@ MACARON User Guide
 
 # Introduction
 
-### MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
-
 MACARON (Multi-bAse Codon-Associated variant Re-annotatiON) is a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data. Starting from a standard VCF file, MACARON identifies, re-annotates and predicts the amino acid change resulting from multiple single nucleotide variants (SNVs) within the same genetic codon. 
 
 The information below includes how to install and run MACARON to filter a list of variant records (from VCF file) called by any existing SNP-based variant caller to identify SNVs with the same genetic codon and correct their corresponding amino acid change.
