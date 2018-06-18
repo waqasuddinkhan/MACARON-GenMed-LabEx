@@ -10,7 +10,7 @@ MACARON User Guide
     * [Operating System Guidelines](#operating-system-guidelines)
     * [Runtime Pre-requisites](#runtime-pre-requisites)
     * [Software Dependencies](#software)
-    * [Build Procedure](#build-procedure)
+    * [Downloading the Source Code](#downloading-the-source-code)
 * [Contents of the folder MACARON_GenMed](#contents-of-the-folder-macaron-genmed)
 
 * [Method Overview](#method-overview)
@@ -57,7 +57,7 @@ __5.__ __SnpEff’s Human Annotation Database__: Depends on user’s input.
 
 For __1__ and __2__, as long as they are compatible with JAVA, MACARON has no issues.
 
-### Build Procedure
+### Downloading the Source Code
 
 The most prefered way to use the lastest version of MACARON is:
 
