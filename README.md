@@ -14,8 +14,10 @@ MACARON User Guide
     * [Contents of the Folder MACARON_GenMed](#contents-of-the-folder-macaron_genmed)
 * [Running the MACARON](#running-the-macaron)
     * [Input Requirements](#input-requirements)
+    * [Default Options](#default-options)
     * [demo Folder](#demo-folder)
-    * [Additional Options](#additional-options)    
+    * [Additional Options](#additional-options)
+    
 
 * [Known Limitations](#known-limitations)
 
@@ -46,7 +48,7 @@ __2.__ Check your __JAVA__ version as MACARON is tested with:
 
 ### Software Dependencies
 
-Before running MACARON, please make sure that following software are properly installed:
+Before running MACARON, please make sure that following software are installed properly:
 
 __1.__ __Genome-Analysis Toolkit__ (https://software.broadinstitute.org/gatk/download/).
 
@@ -94,6 +96,21 @@ Before running MACARON, check these __input technical notes__ as the following l
 - Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets,
 
 - Versions of input VCF file, Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
+
+### Default Options
+
+For a full list of MACARON executable options, run:
+
+      python MACARON -h
+
+By default, MACARON depends on the `GLOBAL VARIABLES` set in the script befroe run:
+
+`## GLOBAL VARIABLES (IMPORTANT: You can set the default values here)
+GATK="/home/wuk/software/GenomeAnalysisTK.jar"
+#GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
+HG_REF="/home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta"
+SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
+SNPEFF_HG="GRCh37.75" ## SnpEff genome version`
 
 ### demo Folder
 
