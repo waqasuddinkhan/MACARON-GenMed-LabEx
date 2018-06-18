@@ -26,7 +26,7 @@ If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abs
 
 ## Introduction
 
-# MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
+### MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
 
 MACARON (Multi-bAse Codon-Associated variant Re-annotatiON) is a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data. Starting from a standard VCF file, MACARON identifies, re-annotates and predicts the amino acid change resulting from multiple single nucleotide variants (SNVs) within the same genetic codon. 
 
@@ -34,11 +34,13 @@ The information below includes how to install and run MACARON to filter a list o
 
 ## Installation
 
-# Runtime Prequisites
+### Runtime Prequisites
 
+MACARON is executable in PYTHON and tested with 2.7.X or later.
 
+### Operating System Guidelines
 
-
+MACARON is know to run and build on LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version.
 
 ## Contents of the folder MACARON_GenMed
 
@@ -52,7 +54,7 @@ The information below includes how to install and run MACARON to filter a list o
 
 ## REQUIREMENTS
 
-MACARON is executable in PYTHON and tested with 2.7.X, LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version. Before running MACARON, please make sure that following software are properly installed:
+MACARON is executable in PYTHON and tested with 2.7.X,  Before running MACARON, please make sure that following software are properly installed:
 
 1. __PYTHON v2.7 or later__ (tested with PYTHON v2.7.12). Please make sure that your running environment is set to the required version of PYTHON.
 
