@@ -1,7 +1,7 @@
 MACARON User Guide
 ================
 
-## Table of Contents
+# Table of Contents
 
 [//]: # (BEGIN automated TOC section, any edits will be overwritten on next source refresh)
 
@@ -24,13 +24,13 @@ MACARON (Multi-bAse Codon-Associated variant Re-annotatiON) is a python framewor
 
 The information below includes how to install and run MACARON to filter a list of variant records (from VCF file) called by any existing SNP-based variant caller to identify SNVs with the same genetic codon and correct their corresponding amino acid change.
 
-## Installation
+# Installation
 
 ### Runtime Prequisites
 
-1. MACARON is executable in __PYTHON v2.7 or later__. If the user has multiple PYTHON, please make sure that your running environment is set to the required version of PYTHON.
+__1.__ MACARON is executable in __PYTHON v2.7 or later__. If the user has multiple PYTHON versions, please make sure that your running environment is set to the required version of PYTHON.
 
-2. Check your __JAVA__ version as MACARON is tested with: java -version
+__2.__ Check your __JAVA__ version as MACARON is tested with: java -version
     openjdk version __"1.8.0_151"__
     OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12)
     OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
@@ -38,6 +38,14 @@ The information below includes how to install and run MACARON to filter a list o
 ### Operating System Guidelines
 
 MACARON is know to run and build on LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version.
+
+Before running MACARON, please make sure that following software are properly installed:
+
+3. __Genome-Analysis Toolkit__ (tested with __version 3.7-0-gcfedb67__; https://software.broadinstitute.org/gatk/download/). However, MACARON compatible with GATK≥4.0 is also available.
+
+4. __SnpEff__ (tested with __v4.3__ (build 2017-05-05 18:41). However, MACARON can also run with any older or newer version (http://snpeff.sourceforge.net/download.html).
+
+5. __SAMTools__ (tested with version __0.1.19__), however any version can be used.
 
 ## Contents of the folder MACARON_GenMed
 
@@ -49,14 +57,9 @@ MACARON is know to run and build on LINUX UBUNTU 16.04 LTS. However, MACARON can
 * *MACARON_validate.txt*  –  The output file with read count information of concerned pcSNV in sample02 (in this case).
 
 
-Before running MACARON, please make sure that following software are properly installed:
 
 
-3. __Genome-Analysis Toolkit__ (tested with __version 3.7-0-gcfedb67__; https://software.broadinstitute.org/gatk/download/). However, MACARON compatible with GATK≥4.0 is also available.
 
-4. __SnpEff__ (tested with __v4.3__ (build 2017-05-05 18:41). However, MACARON can also run with any older or newer version (http://snpeff.sourceforge.net/download.html).
-
-5. __SAMTools__ (tested with version __0.1.19__), however any version can be used.
 
 For 2, 3, as long as they are compatible with JAVA, MACARON has no issues.
 
