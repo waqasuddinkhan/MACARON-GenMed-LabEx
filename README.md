@@ -223,7 +223,7 @@ Field Number | Field Name | Description
 12 | AA-Change | Amino acid change by individual SNV
 13 | Ref-codon | Reference Codon
 14 | Alt-codon | Alternate Codon
-15 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON])(https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
+15 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
 16 | AA-change-2VAR | Re-annotated amino acid formed by pcSNV codon
 17 | Altcodon_merge-3VAR | A new codon formed by the combination of three Alt-codons
 18 | AA-change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons
