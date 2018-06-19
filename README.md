@@ -180,14 +180,14 @@ Without `-f` option, `QUAL` field is outputted as default.If user wants to keep 
 
 # MACARON Reporting Format
 
-MACARON outputs a table text file with following format specifications:
+MACARON outputs a table text file with the following format specifications:
 
 ```
 chr22	21349676	rs412470	T	A	LZTR1	423	T/T	T/A	T/T	0/0	0/1	0/0	MISSENSE	S92T	Tct	Act	ATt	I	0	0
 chr22	21349677	rs376419	C	T	LZTR1	423	C/C	C/T	C/C	0/0	0/1	0/0	MISSENSE	S92F	tCt	tTt	0	I	0	0
 ```
-Field Name | Description
---- | ---
+Field Number | Field Name | Description
+--- | --- | ---
 1 |CHROM | Chromosome number
 2 | POS | Chromosomal position / coordinates of SNV
 3 | ID | dbSNP rsID
@@ -207,7 +207,26 @@ Field Name | Description
 
 This default's MACARON output can be changed by using `-f` option. For example, if MACARON run with `-f QUAL,FILTER,SIFT_pred`, the new output looks like:
 
-
+Field Number | Field Name | Description
+--- | --- | ---
+1 |CHROM | Chromosome number
+2 | POS | Chromosomal position / coordinates of SNV
+3 | ID | dbSNP rsID
+4 | REF | Reference base
+5 | ALT | Alternate base
+6 | Gene_Name | Name of a gene in which SnpCluster is located
+7 | QUAL | Quality of the ALT base called
+8 | FILTER | Filter (PASS) tag
+9 | SIFT_pred | Functional effect prediction of SNV on protien
+10 | [SAMPLE NAME].GT | Genotype of samples as base conventions as well as binary conventions
+11 | Protein_coding_EFF | Functional Effect of Variant on protein
+12 | AA-Change | Amino acid change by individual SNV
+13 | Ref-codon | Reference Codon
+14 | Alt-codon | Alternate Codon
+15 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext)
+16 | AA-change-2VAR | Re-annotated amino acid formed by pcSNV codon
+17 | Altcodon_merge-3VAR | A new codon formed by the combination of three Alt-codons
+18 | AA-change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons
 
 # VALIDATING SNVs' PRESENCE ON THE SAME READ
 
