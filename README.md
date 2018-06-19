@@ -16,7 +16,7 @@ MACARON User Guide
     * [Input Requirements](#input-requirements)
     * [Default Options](#default-options)
     * [demo Folder](#demo-folder)
-    * [Advanced Options](#additional-options)
+    * [Advanced Options](#advanced-options)
 * [MACARON Reporting Format](#macaron-reporting-format)
 * [Known Limitations](#known-limitations)
 
@@ -157,7 +157,7 @@ For __GATK >= 4.0__:
 ```bash
 python ../MACARON -i variants_of_interest.vcf --gatk4 --GATK /home/wuk/software/ --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75
 ```
-MACARON can add additional fields, besdies the dafault (see [MACARON Reporting Format](#macaron-reporting-format) by using `-f` option:
+MACARON can add additional fields, besdies the dafault (see [MACARON Reporting Format](#macaron-reporting-format)) by using `-f` option:
 
 * -f CSQ (if input VCF file is additionally annotated with VEP, the output txt file also has the same complete annotation for each variant record)
 
