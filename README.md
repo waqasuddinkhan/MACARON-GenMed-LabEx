@@ -111,11 +111,11 @@ By default, MACARON depends on the `GLOBAL VARIABLES` set in the script before r
       SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
       SNPEFF_HG="GRCh37.75" ## SnpEff genome version
 
-To run MACARON with __GATK <4.0__, simply type:
+To run MACARON with __GATK <4.0__ versions, simply type:
 
       python MACARON -i test_input.vcf
 
-If running with __GATK >= 4.0__, make following changes:
+If running with __GATK >= 4.0__ versions, make following changes:
 
       #GATK="/home/wuk/software/GenomeAnalysisTK.jar"
       GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
@@ -152,7 +152,7 @@ MACARON can be run by invoking paths directly set from the command-line:
 ```bash
 python ../MACARON -i variants_of_interest.vcf --GATK /home/wuk/software/GenomeAnalysisTK.jar --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75
 ```
-* For __GATK >= 4.0__:
+* For __GATK >= 4.0__ versions:
 
 ```bash
 python ../MACARON -i variants_of_interest.vcf --gatk4 --GATK /home/wuk/software/ --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75
@@ -198,12 +198,12 @@ Field Number | Field Name | Description
 8 | [SAMPLE NAME].GT | Genotype of samples as base conventions as well as binary conventions
 9 | Protein_coding_EFF | Functional Effect of Variant on protein
 10 | AA-Change | Amino acid change by individual SNV
-11 | Ref-codon | Reference Codon
-12 | Alt-codon | Alternate Codon
-13 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
-14 | AA-change-2VAR | Re-annotated amino acid formed by pcSNV codon
-15 | Altcodon_merge-3VAR | A new codon formed by the combination of three Alt-codons
-16 | AA-change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons 
+11 | REF-codon | Reference Codon
+12 | ALT-codon | Alternate Codon
+13 | ALT-codon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
+14 | AA-Change-2VAR | Re-annotated amino acid formed by pcSNV codon
+15 | ALT-codon_merge-3VAR | A new codon formed by the combination of three Alt-codons
+16 | AA-Change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons 
 
 This default's MACARON output can be changed by using `-f` option. For example, if MACARON run with `-f QUAL,FILTER,SIFT_pred`, the new output looks like:
 
@@ -221,12 +221,12 @@ Field Number | Field Name | Description
 10 | [SAMPLE NAME].GT | Genotype of samples as base conventions as well as binary conventions
 11 | Protein_coding_EFF | Functional Effect of Variant on protein
 12 | AA-Change | Amino acid change by individual SNV
-13 | Ref-codon | Reference Codon
-14 | Alt-codon | Alternate Codon
-15 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
-16 | AA-change-2VAR | Re-annotated amino acid formed by pcSNV codon
-17 | Altcodon_merge-3VAR | A new codon formed by the combination of three Alt-codons
-18 | AA-change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons
+13 | REF-codon | Reference Codon
+14 | ALT-codon | Alternate Codon
+15 | ALT-codon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext))
+16 | AA-Change-2VAR | Re-annotated amino acid formed by pcSNV codon
+17 | ALT-codon_merge-3VAR | A new codon formed by the combination of three Alt-codons
+18 | AA-Change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons
 
 # VALIDATING SNVs' PRESENCE ON THE SAME READ
 
