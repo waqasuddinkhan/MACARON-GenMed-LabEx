@@ -86,15 +86,15 @@ After acquiring a release distribution of the source code, the build procedure i
 
 Before running MACARON, check these __input technical notes__ as the following limitations exist for either the input VCF file, or the required software dependencines:
 
-- Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file, or vice versa,
+* Chromosome (chr) notation should be compatible with both input VCF file and Human Reference Genome file, or vice versa,
 
-- Sequence dictionaries of input VCF file and Human Reference Genome file should be the same,
+* Sequence dictionaries of input VCF file and Human Reference Genome file should be the same,
 
-- Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below),
+* Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below),
 
-- Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets,
+* Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets,
 
-- Versions of input VCF file, Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
+* Versions of input VCF file, Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
 
 ### Default Options
 
@@ -152,24 +152,24 @@ MACARON can be run by invoking paths directly set from the command-line:
 ```bash
 python ../MACARON -i variants_of_interest.vcf --GATK /home/wuk/software/GenomeAnalysisTK.jar --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75
 ```
-For __GATK >= 4.0__:
+* For __GATK >= 4.0__:
 
 ```bash
 python ../MACARON -i variants_of_interest.vcf --gatk4 --GATK /home/wuk/software/ --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75
 ```
 MACARON can add additional fields, besdies the dafault (see [MACARON Reporting Format](#macaron-reporting-format)) by using `-f` option:
 
-* -f CSQ (if input VCF file is additionally annotated with VEP, the output txt file also has the same complete annotation for each variant record)
+* `-f CSQ` (if input VCF file is additionally annotated with VEP, the output txt file also has the same complete annotation for each variant record)
 
-* -f EFF (if user wants to output SnpEff annotations in output txt file), or -f ANN (if SnpEff is used without -formatEff option)
+* `-f EFF` (if user wants to output SnpEff annotations in output txt file), or -f ANN (if SnpEff is used without -formatEff option)
 
-* -f QUAL,DP,AF,Func.refGene,Gene.refGene,GeneDetail.refGene (this will keep any other default annotations of input VCF file and of ANNOVAR to output txt file)
+* `-f QUAL,DP,AF,Func.refGene,Gene.refGene,GeneDetail.refGene` (this will keep any other default annotations of input VCF file and of ANNOVAR to output txt file)
 
 -f can be used multiple times, e.g.,
 
-* -f CSQ,DP,Func.refGene
+* `-f CSQ,DP,Func.refGene`
 or
-* -f FILTER,EFF,CSQ,AF
+* `-f FILTER,EFF,CSQ,AF`
 
 The order of the fields in the output txt file depends on the order of INFO field headers used in `-f`.
 
@@ -177,6 +177,37 @@ The order of the fields in the output txt file depends on the order of INFO fiel
 python ../MACARON -i variants_of_interest.vcf --gatk4 --GATK /home/wuk/software/ --HG_REF /home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta --SNPEFF /home/wuk/software/snpEff/snpEff.jar --SNPEFF_HG GRCh37.75 -f QUAL,FILTER,SIFT_pred 
 ```
 Without `-f` option, `QUAL` field is outputted as default.If user wants to keep `QUAL` along with any other field, `-f` should mentiond `QUAL` in addition to other field headers: `-f QUAL,FILTER,SIFT_pred`. If only `-f SIFT_pred` is used, `QUAL` field is over-written by `SIFT_pred` field.
+
+# MACARON Reporting Format
+
+MACARON outputs a table text file with following format specifications:
+
+```
+chr22	21349676	rs412470	T	A	LZTR1	423	T/T	T/A	T/T	0/0	0/1	0/0	MISSENSE	S92T	Tct	Act	ATt	I	0	0
+chr22	21349677	rs376419	C	T	LZTR1	423	C/C	C/T	C/C	0/0	0/1	0/0	MISSENSE	S92F	tCt	tTt	0	I	0	0
+```
+Field Name | Description
+--- | ---
+1 |CHROM | Chromosome number
+2 | POS | Chromosomal position / coordinates of SNV
+3 | ID | dbSNP rsID
+4 | REF | Reference base
+5 | ALT | Alternate base
+6 | Gene_Name | Name of a gene in which SnpCluster is located
+7 | QUAL | Quality of the ALT base called
+8 | [SAMPLE NAME].GT | Genotype of samples as base conventions as well as binary conventions
+9 | Protein_coding_EFF | Functional Effect of Variant on protein
+10 | AA-Change | Amino acid change by individual SNV
+11 | Ref-codon | Reference Codon
+12 | Alt-codon | Alternate Codon
+13 | Altcodon_merge-2VAR | A new codon formed by the combination of two Alt-codons (pcSNV codon; see [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext)
+14 | AA-change-2VAR | Re-annotated amino acid formed by pcSNV codon
+15 | Altcodon_merge-3VAR | A new codon formed by the combination of three Alt-codons
+16 | AA-change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons 
+
+This default's MACARON output can be changed by using `-f` option. For example, if MACARON run with `-f QUAL,FILTER,SIFT_pred`, the new output looks like:
+
+
 
 # VALIDATING SNVs' PRESENCE ON THE SAME READ
 
