@@ -1,0 +1,7 @@
+plugins:
+  - jekyll-seo-tag
+
+google:
+	username: waqasuddinkhan
+	card: macaron
+
