@@ -228,9 +228,9 @@ Field Number | Field Name | Description
 17 | ALT-codon_merge-3VAR | A new codon formed by the combination of three Alt-codons
 18 | AA-Change-3VAR | Re-annotated amino acid formed by the combination of three Alt-codons
 
-# VALIDATING SNVs' PRESENCE ON THE SAME READ
+# Validating SNVs Existed on the Same Reads
 
-To confirm the existence of multi-SNVs within the same genetic codon, an accessory BASH-shell script (available with MACARON) calculates the read count information of affected bases. Using SAMTools, generate a subset of your BAM file (it should be the same used to generate VCF file for MACARON run) covering 50 bps over each clustered SNVs.
+To confirm the existence of multi-SNVs within the same genetic codon, an accessory BASH-shell script [MACARON_validate.sh](MACARON_validate.sh) calculates the read count information of affected bases. To use this scriptUsing SAMTools, generate a subset of your BAM file (it should be the same used to generate VCF file for MACARON run) covering 50 bps over each clustered SNVs.
 
 example: 
 
