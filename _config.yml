@@ -1,9 +1,16 @@
-url: "https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx" # the base hostname & protocol for your site
 plugins:
   - jekyll-seo-tag
 
 google:
+ title: macaron
  username: waqasuddinkhan
- card: macaron
+ url: https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx
+
+webmaster_verifications:
+ google: 1234
+ bing: 1234
+ alexa: 1234
+ yandex: 1234
+ baidu: 1234
 
 theme: jekyll-theme-cayman
