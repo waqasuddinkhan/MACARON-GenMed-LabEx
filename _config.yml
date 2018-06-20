@@ -1,3 +1,4 @@
+url: "https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx" # the base hostname & protocol for your site
 plugins:
   - jekyll-seo-tag
 
