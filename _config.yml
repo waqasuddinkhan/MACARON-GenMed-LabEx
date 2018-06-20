@@ -4,3 +4,5 @@ plugins:
 google:
  username: waqasuddinkhan
  card: macaron
+
+theme: jekyll-theme-cayman
