@@ -1,10 +1,9 @@
 plugins:
   - jekyll-seo-tag
 
-google:
- title: macaron
- username: waqasuddinkhan
- url: https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx
+title: macaron
+username: waqasuddinkhan
+url: https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx
 
 webmaster_verifications:
  google: 1234
