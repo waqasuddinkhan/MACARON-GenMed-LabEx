@@ -20,6 +20,7 @@ MACARON User Guide
 * [MACARON Reporting Format](#macaron-reporting-format)
 * [Validating SNVs Existed on the Same Reads](#validating-snvs-existed-on-the-same-reads)
 * [References](#references)
+* [Citation](#citation)
 
 [//]: # (END automated TOC section, any edits will be overwritten on next source refresh)
 
@@ -261,16 +262,18 @@ See [MACARON-GenMed-LabEx Wiki](https://github.com/waqasuddinkhan/MACARON-GenMed
 
 # References
 
-__1.__ [Van der Auwera G.A., et al. (2013) From FastQ Data to High-Confidence Variant Calls: The Genome Analysis Toolkit Best Practices Pipeline, Curr Protoc Bioinformatics, 43:11.10.1-11.10.33.](https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471250953.bi1110s43).
-* Cingolani, P., et al. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly, 6, 80-92.
-* McLaren, W., et al. (2010) Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor, Bioinformatics, 26, 2069-2070.
-* Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data, Nucleic Acids Res, 38, e164.
+__1.__ [Van der Auwera G.A., et al. (2013) From FastQ Data to High-Confidence Variant Calls: The Genome Analysis Toolkit Best Practices Pipeline, Curr Protoc Bioinformatics, 43:11.10.1-11.10.33.](https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471250953.bi1110s43)
+__2.__ [Cingolani, P., et al. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly, 6, 80-92.](https://www.tandfonline.com/doi/full/10.4161/fly.19695)
+__3.__ [McLaren, W., et al. (2010) Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor, Bioinformatics, 26, 2069-2070.](https://academic.oup.com/bioinformatics/article/26/16/2069/217748)
+__4.__ [Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data, Nucleic Acids Res, 38, e164.](https://academic.oup.com/nar/article/38/16/e164/1749458)
 
-*CONTACT: david-alexandre.tregouet@inserm.fr*
+# Citation
 
-*VERSION: 0.3*
-*VERSION DATE: 11th April, 2018*
-
-If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext), please cite:
+If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty382/4992149?redirectedFrom=fulltext) in your research, please cite:
 
 *Khan W. et al. MACARON: a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data, Bioinformatics 2018*
+
+*CONTACT: david-alexandre.tregouet@inserm.fr;*
+
+*VERSION: 0.6*
+*VERSION DATE: 19th June, 2018*
