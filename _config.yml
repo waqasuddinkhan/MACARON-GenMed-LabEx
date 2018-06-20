@@ -2,5 +2,5 @@ plugins:
   - jekyll-seo-tag
 
 google:
-	username: waqasuddinkhan
-	card: macaron
+ username: waqasuddinkhan
+ card: macaron
