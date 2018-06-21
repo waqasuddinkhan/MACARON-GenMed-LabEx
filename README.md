@@ -30,7 +30,7 @@ MACARON (Multi-bAse Codon-Associated variant Re-annotatiON) is a python framewor
 
 The information below includes how to install and run MACARON to filter a list of variant records (from VCF file) called by any existing SNP-based variant caller to identify SNVs with the same genetic codon and correct their corresponding amino acid change.
 
-See latest [News](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki/News???) and [Updates](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki/Updates???) on [MACARON-GenMed-LabEx Wiki page](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki).
+See latest [News](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki/News???) and [Updates](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki#updates) on [MACARON-GenMed-LabEx Wiki page](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki).
 
 # Installation
 
