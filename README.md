@@ -30,6 +30,8 @@ MACARON (Multi-bAse Codon-Associated variant Re-annotatiON) is a python framewor
 
 The information below includes how to install and run MACARON to filter a list of variant records (from VCF file) called by any existing SNP-based variant caller to identify SNVs with the same genetic codon and correct their corresponding amino acid change.
 
+See latest [News](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki/News???) and [Updates](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki/Updates???) on [MACARON-GenMed-LabEx Wiki page](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki).
+
 # Installation
 
 ### Operating System Guidelines
@@ -92,7 +94,7 @@ Before running MACARON, check these __input technical notes__ as the following l
 
 * Sequence dictionaries of input VCF file and Human Reference Genome file should be the same,
 
-* Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see below),
+* Input VCF file (should) suitably be annotated with ANNOVAR, and additionally with any other annotation software, e.g, VEP (https://www.ensembl.org/info/docs/tools/vep/index.html) if the user has a desire to get the full functionality of -f option (see [Advanced Options](#advanced-options) below),
 
 * Same Human Reference Genome file should be used for MACARON which is practiced earlier for alignemnt and (or) to call variant sets,
 
@@ -258,7 +260,7 @@ This will generate an output text file (`MACARON_validate.txt`) allowing the use
             11 AT
             14 TC
 
-See [MACARON-GenMed-LabEx Wiki](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki) for more details, and interpretations of the [demo](demo) data.
+See [MACARON-GenMed-LabEx Wiki page](https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx/wiki) for more details, and interpretations of the [demo](demo) data.
 
 # References
 
