@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#alpha version 0.6 (15/06/18)
+#alpha version 0.7 (05/09/18)
 
 """
 #Script to identify SNPs located within a genetic codon:
@@ -25,8 +25,8 @@ import subprocess
 from argparse import ArgumentParser
 
 ## GLOBAL VARIABLES (IMPORTANT: You can set the default values here)
-#GATK="/home/wuk/software/GenomeAnalysisTK.jar"
-GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
+GATK="/home/wuk/software/GenomeAnalysisTK.jar"
+#GATK="/home/wuk/software/gatk-4.0.1.2/gatk-package-4.0.1.2-local.jar"
 HG_REF="/home/wuk/Working/gnme_refrnces/Homo_sapiens_assembly19.fasta"
 SNPEFF="/home/wuk/software/snpEff/snpEff.jar"
 SNPEFF_HG="GRCh37.75" ## SnpEff human genome annotation database version
@@ -110,7 +110,7 @@ class SearchDB(fileHandler):
 			cmd1 = "java -Xmx12g -jar " + GATK + " VariantFiltration -R " + HG_REF + " -V "+ vcf_input +" -O " + workdir + "snp_clsters2_ws3.vcf --cluster-size 2 --cluster-window-size 3" + GATK_v
 			cmd2 = "java -Xmx12g -jar " + GATK + " SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3.vcf -O " + workdir + "snp_clsters2_ws3_clstronly.vcf -select 'FILTER == SnpCluster'" + GATK_v
 			cmd3 = "java -Xmx12g -jar " + SNPEFF + SNPeff_v + SNPEFF_HG + " -formatEff -lof -classic " + workdir + "snp_clsters2_ws3_clstronly.vcf > " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf"
-			cmd4 = "java -Xmx12g -jar " + GATK + " SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf -O " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf --select-type-to-exclude INDEL" + GATK_v
+			cmd4 = "java -Xmx12g -jar " + GATK + " SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf -O " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf --select-type-to-include SNP" + GATK_v
 			cmd5 = "java -Xmx12g -jar " + GATK + " VariantsToTable -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf -F CHROM -F POS -F ID -F REF -F ALT -F EFF " + FldwithF + " -GF GT --error-if-missing-data --show-filtered -O " + workdir + "snp_clsters2_ws3_clstronly_annt_snv_clstronly.table" + GATK_v
 			## GATK4 needs to index the VCF upfront
 			thread = print_step(keep_anim, 0)
@@ -122,7 +122,7 @@ class SearchDB(fileHandler):
 			cmd1 = "java -Xmx4g -jar " + GATK + " -T VariantFiltration -R " + HG_REF + " -V " + vcf_input + " -o " + workdir + "snp_clsters2_ws3.vcf --clusterSize 2 --clusterWindowSize 3" + GATK_v
 			cmd2 = "java -Xmx4g -jar " + GATK + " -T SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3.vcf -o " + workdir + "snp_clsters2_ws3_clstronly.vcf -select 'FILTER == SnpCluster'" + GATK_v
 			cmd3 = "java -Xmx4g -jar " + SNPEFF + SNPeff_v + SNPEFF_HG + " -formatEff -lof -classic " + workdir + "snp_clsters2_ws3_clstronly.vcf > " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf"
-			cmd4 = "java -Xmx4g -jar " + GATK + " -T SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf -o " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf --selectTypeToExclude INDEL" + GATK_v
+			cmd4 = "java -Xmx4g -jar " + GATK + " -T SelectVariants -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt.vcf -o " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf --selectTypeToInclude SNP" + GATK_v
 			cmd5 = "java -Xmx4g -jar " + GATK + " -T VariantsToTable -R " + HG_REF + " -V " + workdir + "snp_clsters2_ws3_clstronly_annt_snv.vcf -F CHROM -F POS -F ID -F REF -F ALT -F EFF " + FldwithF + " -GF GT --showFiltered -o " + workdir + "snp_clsters2_ws3_clstronly_annt_snv_clstronly.table" + GATK_v
 		
 		thread = print_step(keep_anim, 1)
