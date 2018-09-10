@@ -280,7 +280,7 @@ If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abs
 
 *Khan W. et al. MACARON: a python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data, Bioinformatics 2018*
 
-*CONTACT: david-alexandre.tregouet@inserm.fr;*
+*CONTACT: david-alexandre.tregouet@inserm.fr; waqasnayab@gmail.com*
 
 *VERSION: 0.6*
 *VERSION DATE: 19th June, 2018*
