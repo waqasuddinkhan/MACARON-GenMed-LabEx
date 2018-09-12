@@ -283,4 +283,4 @@ If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abs
 *CONTACT: david-alexandre.tregouet@inserm.fr; waqasnayab@gmail.com*
 
 *VERSION: 0.7*
-*VERSION DATE: 05th September, 2018*
+*VERSION DATE: September 5, 2018*
