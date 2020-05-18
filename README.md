@@ -282,5 +282,4 @@ If you use [MACARON](https://academic.oup.com/bioinformatics/advance-article-abs
 
 *CONTACT: david-alexandre.tregouet@inserm.fr; waqasnayab@gmail.com*
 
-**VERSION: 1.0**
-**VERSION RELEASE DATE: May 18, 2020**
+**VERSION: 1.0**; **VERSION RELEASE DATE: May 18, 2020**
